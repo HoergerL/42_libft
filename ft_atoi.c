@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:57:27 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/15 13:45:40 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/16 11:01:32 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	count_minus(char *str)
+int	check_minus(const char *str, int len)
 {
-	int cnt;
-	int cnt2;
-	int count_minus;
+	int	cnt;
+	int	cnt2;
 
 	cnt = 0;
 	cnt2 = 0;
-	count_minus = 0;
 	while ((str[cnt] >= 9 && str[cnt] <= 13) || str[cnt] == 32)
 		cnt++;
-	while (str[cnt] == '-' || str[cnt] == '+')
+	if (cnt < len - 1)
 	{
-		if (str[cnt] == 45)
-			count_minus++;
-		cnt++;
+		if (str[cnt] == '-' && (str[cnt + 1] >= '0' && str[cnt + 1] <= '9'))
+			return (-1);
+		if (str[cnt] == '+' && (str[cnt + 1] >= '0' && str[cnt + 1] <= '9'))
+			return (1);
 	}
-	if (str[cnt] >= '0' && str[cnt] <= '9')
-		cnt2++;
-	if (cnt2 == 0)
-		return (0);
-	else if (count_minus % 2 == 1)
-		return (-1);
-	else
+	else if (str[cnt] >= '0' && str[cnt] <= '9')
 		return (1);
+	return (0);
 }
 
-int	print_numb(char *str)
+int	print_numb(const char *str)
 {
-	int cnt;
-	int nb;
+	int	cnt;
+	int	nb;
 
 	nb = 0;
 	cnt = 0;
@@ -58,18 +52,26 @@ int	print_numb(char *str)
 	return (nb);
 }
 
-int	ft_atoi(char *str)
+int	ft_strlen(const char *s)
 {
-	int minus;
-	int nb;
+	int	cnt;
 
-	minus = count_minus(str);
-	nb = print_numb(str);
-	return (minus * nb);
+	cnt = 0;
+	while (s[cnt] != '\0')
+	{
+		cnt++;
+	}
+	return (cnt);
 }
 
-int main()
+int	ft_atoi(const char *str)
 {
-	printf("%i\n", ft_atoi("   \n\t+--+-214748361481" ));
-	//printf("%i\n", atoi("\n !  --650"));
+	int	minus;
+	int	nb;
+	int	len;
+
+	len = ft_strlen(str);
+	minus = check_minus(str, len);
+	nb = print_numb(str);
+	return (minus * nb);
 }

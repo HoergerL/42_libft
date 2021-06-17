@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:54:57 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/15 13:45:44 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/16 16:16:36 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
-{
-	int cnt;
+#include <stddef.h>
 
+size_t	ft_strlen(const char *s)
+{
+	int	cnt;
+	
 	cnt = 0;
-	while (str[cnt] != '\0')
+	while (s[cnt] != '\0')
 	{
 		cnt++;
 	}
