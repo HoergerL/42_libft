@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:16:15 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 12:22:00 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 15:14:07 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strchr(const char *s, int c)
 	while (cnt <= len)
 	{
 		if (s[cnt] == c)
-			return ((char*) &s[cnt]);
+			return ((char *) &s[cnt]);
 		cnt++;
 	}
-	return ((void*) 0);
+	return ((void *) 0);
 }

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   calloc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 15:46:04 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 15:46:16 by lhoerger         ###   ########.fr       */
+/*   Created: 2021/06/20 13:43:24 by lhoerger          #+#    #+#             */
+/*   Updated: 2021/06/20 15:58:16 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned int		c;
-	unsigned char		*t;
+	void * point;
 
-	c = 0;
-	t = (unsigned char *)s;
-	while (n > c)
+	if(count == 0 || size == 0)
 	{
-		t[c] = '\0';
-		c++;
+		count = 1;
+		size = 1;
 	}
+	
+	point = malloc(size * count + 1);
+	ft_bzero(point, size * count);
+	return point;
 }
