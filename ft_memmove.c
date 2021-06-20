@@ -6,24 +6,11 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 11:36:37 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/19 17:40:32 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 12:21:48 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	cnt;
-	
-	cnt = 0;
-	while (s[cnt] != '\0')
-	{
-		cnt++;
-	}
-	return (cnt);
-}
-
+#include "libft.h"
 
 void *	ft_memmove(void *dst, const void *src, size_t len)
 {

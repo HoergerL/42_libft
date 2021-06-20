@@ -6,16 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 15:36:24 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/19 15:45:45 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 12:37:05 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	cnt;
+	size_t	cnt;
 	char*	s1c;
 	char*	s2c;
 	

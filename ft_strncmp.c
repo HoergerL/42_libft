@@ -6,9 +6,11 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:48:44 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/16 15:45:35 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 12:22:27 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

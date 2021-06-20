@@ -6,11 +6,11 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:57:27 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/16 11:01:32 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 12:19:42 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	check_minus(const char *str, int len)
 {
@@ -28,7 +28,7 @@ int	check_minus(const char *str, int len)
 		if (str[cnt] == '+' && (str[cnt + 1] >= '0' && str[cnt + 1] <= '9'))
 			return (1);
 	}
-	else if (str[cnt] >= '0' && str[cnt] <= '9')
+	if (str[cnt] >= '0' && str[cnt] <= '9')
 		return (1);
 	return (0);
 }
@@ -50,18 +50,6 @@ int	print_numb(const char *str)
 		cnt++;
 	}
 	return (nb);
-}
-
-int	ft_strlen(const char *s)
-{
-	int	cnt;
-
-	cnt = 0;
-	while (s[cnt] != '\0')
-	{
-		cnt++;
-	}
-	return (cnt);
 }
 
 int	ft_atoi(const char *str)

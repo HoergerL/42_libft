@@ -6,11 +6,11 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 13:47:51 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/19 15:35:25 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 12:21:15 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void *ft_memccpy(void * dst, const void * src, int c, size_t n)
 {

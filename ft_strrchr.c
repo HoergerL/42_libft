@@ -1,14 +1,16 @@
-int	ft_strlen(const char *s)
-{
-	int	cnt;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/20 12:22:42 by lhoerger          #+#    #+#             */
+/*   Updated: 2021/06/20 12:22:43 by lhoerger         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	cnt = 0;
-	while (s[cnt] != '\0')
-	{
-		cnt++;
-	}
-	return (cnt);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

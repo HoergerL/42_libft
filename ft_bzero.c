@@ -6,11 +6,11 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 11:03:03 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/19 12:29:00 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/20 12:20:14 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {
