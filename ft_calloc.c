@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 13:43:24 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 15:58:16 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/21 13:24:30 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ void	*ft_calloc(size_t count, size_t size)
 		size = 1;
 	}
 	
-	point = malloc(size * count + 1);
+	point = malloc(size * count);
+	if (!point)
+		return (0);
 	ft_bzero(point, size * count);
 	return point;
 }

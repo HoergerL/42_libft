@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 16:01:00 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 16:30:43 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/21 13:25:15 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *s1)
 	
 	len = ft_strlen(s1);
 	s2 = malloc(sizeof(char) * len + 1);
+	if (!s2)
+		return (0);
 	ft_strlcpy((char *) s2, s1, len + 1);
 	return s2;
 }

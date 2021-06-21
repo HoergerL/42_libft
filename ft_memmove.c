@@ -6,28 +6,11 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 11:36:37 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 15:43:11 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/21 10:51:22 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_else(size_t len, char *src2, char *dest2, const void *src)
-{
-	size_t	j;
-	size_t	i;
-
-	i = 0;
-	j = len - 1;
-	if (len > ft_strlen(src))
-		dest2[j + 1] = '\0';
-	while (i < len)
-	{
-		dest2[j] = src2[j];
-		i++;
-		j--;
-	}
-}
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -38,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	src2 = (char *) src;
 	dest2 = (char *) dst;
 	i = 0;
+	if (dst == 0 && src == 0)
+		return (0);
 	if (src >= dst)
 	{
 		while (i < len)
@@ -48,7 +33,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		ft_else(len, src2, dest2, src);
+		i = len;
+		while (i > 0)
+		{
+			dest2[i - 1] = src2[i - 1];
+			i--;
+		}
 	}
 	return (dst);
 }

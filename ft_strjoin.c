@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 16:32:41 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/21 14:46:22 by lhoerger         ###   ########.fr       */
+/*   Created: 2021/06/21 14:10:51 by lhoerger          #+#    #+#             */
+/*   Updated: 2021/06/21 14:28:57 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-		char	*s2;
-		size_t len_substr;
+	char	*s3;
+	size_t	len;
 
-		if(!s || len == 0)
-			return (0);
-		len_substr = ft_strlen(&s[start]);
-		if(len_substr > len)
-			len_substr = len;
-		s2 = malloc(sizeof(char) * len + 1);
-		if (!s2)
-			return (0);
-		if(start > ft_strlen(s))
-			return s2;
-		ft_memcpy(s2, &s[start], len_substr);
-		s2[len_substr] = '\0';
-		return s2;
+	if(!s1 || !s2)
+		return (0);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	//printf("ges:%i, s1: %i, s2: %i\n", len, strlen(s1), strlen(s2));
+	s3 = malloc(sizeof(char) * len);
+	if(!s3)
+		return (0);
+	ft_strlcpy(s3, s1, ft_strlen(s1) + 1);
+	ft_strlcat(s3, s2, len);
+	return s3;
 }
+
