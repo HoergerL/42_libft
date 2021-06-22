@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 14:30:15 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/21 16:25:14 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/22 09:49:17 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,14 @@ char *ft_strtrim(char const *s1, char const *set)
 	len = findend(s1, set) - findstart(s1, set);
 	
 	//printf("Len = %i\n", len);
-	str2 = malloc(sizeof(char) * len + 1);
-
+	str2 = malloc(sizeof(char) * len + 2);
 	if(!str2)
 		return (0);
+	if (len == 0)
+	{
+		str2[0] = '\0';
+		return str2;
+	}
 	len = findstart(s1, set);
 	while (len >= findstart(s1, set) && len <= findend(s1, set))
 	{
@@ -96,5 +100,6 @@ char *ft_strtrim(char const *s1, char const *set)
 		len++;
 		i++;
 	}
+	str2[i] = '\0';
 	return str2;
 }
