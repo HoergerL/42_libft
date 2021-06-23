@@ -33,11 +33,20 @@ char **ft_split(char const *s, char c)
 	{
 		len_s++;
 	}
+	if(len_s == 0)
+	{
+		len_s = 1;
+	}
 	str_ar = malloc(sizeof(char *) * len_s);
+
 	len = 0;
 	i = 0;
 	if(!str_ar)
 		return NULL;
+	if(len_s == 1)
+	{
+		*str_ar = "\0";
+	}
 	resultstr = NULL;
 	while (start_index < ft_strlen(s))
 	{

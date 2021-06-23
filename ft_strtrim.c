@@ -71,12 +71,10 @@ char *ft_strtrim(char const *s1, char const *set)
 {
 	
 	size_t len;
-	size_t j;
 	size_t i;
 	char	*str2;
 
 	i = 0;
-	j = 0;
 	len = 0;
 	if(!s1 || !set)
 		return (0);

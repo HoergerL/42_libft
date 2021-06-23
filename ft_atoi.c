@@ -15,10 +15,8 @@
 static int	check_minus(const char *str, int len)
 {
 	int	cnt;
-	int	cnt2;
 
 	cnt = 0;
-	cnt2 = 0;
 	while ((str[cnt] >= 9 && str[cnt] <= 13) || str[cnt] == 32)
 		cnt++;
 	if (cnt < len - 1)
@@ -58,10 +56,13 @@ int	ft_atoi(const char *str)
 	int	nb;
 	int	len;
 
+	if(str[0] == '\0')
+	{
+		int i = 0;
+		return (i);
+	}
 	len = ft_strlen(str);
 	minus = check_minus(str, len);
 	nb = print_numb(str);
-	if(str[0] == '\0')
-		return (0);
 	return (minus * nb);
 }
