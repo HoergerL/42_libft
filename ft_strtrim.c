@@ -6,13 +6,13 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 14:30:15 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/22 09:49:17 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:42:39 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strfind(const char *s, int c)
+static size_t	strfind(const char *s, int c)
 {
 	int	len;
 
@@ -28,7 +28,7 @@ size_t	strfind(const char *s, int c)
 	return 0;
 }
 
-size_t findstart(char const *str, char const *set)
+static size_t findstart(char const *str, char const *set)
 {
 	size_t i;
 	size_t start;
@@ -47,7 +47,7 @@ size_t findstart(char const *str, char const *set)
 	}
 	return 0;
 }
-size_t findend(char const *str, char const *set)
+static size_t findend(char const *str, char const *set)
 {
 	size_t i;
 	size_t start;

@@ -6,13 +6,13 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 10:43:43 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/22 11:48:05 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:22:00 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lenHelper(unsigned x) {
+static int ft_lenHelper(unsigned x) {
 	if (x >= 1000000000) return 10;
 	if (x >= 100000000)  return 9;
 	if (x >= 10000000)   return 8;

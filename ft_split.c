@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 09:50:35 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/22 16:51:24 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:53:53 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ char **ft_split(char const *s, char c)
 		{
 			resultstr = ft_substr(s, start_index, len_s);
 			str_ar[i] = resultstr;
-			break;
+			str_ar[len_s - 1] = (void*) NULL;
+			return str_ar;
+
 		}
 		len = t - substr;
 		if(len > 0)

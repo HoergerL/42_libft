@@ -6,13 +6,13 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:57:27 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 12:19:42 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:21:43 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_minus(const char *str, int len)
+static int	check_minus(const char *str, int len)
 {
 	int	cnt;
 	int	cnt2;
@@ -33,7 +33,7 @@ int	check_minus(const char *str, int len)
 	return (0);
 }
 
-int	print_numb(const char *str)
+static int	print_numb(const char *str)
 {
 	int	cnt;
 	int	nb;
@@ -61,5 +61,7 @@ int	ft_atoi(const char *str)
 	len = ft_strlen(str);
 	minus = check_minus(str, len);
 	nb = print_numb(str);
+	if(str[0] == '\0')
+		return (0);
 	return (minus * nb);
 }

@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/22 17:04:13 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/23 16:28:32 by lhoerger         ###   ########.fr       */
+/*   Created: 2021/06/23 14:10:04 by lhoerger          #+#    #+#             */
+/*   Updated: 2021/06/23 14:14:15 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-void ft_putnbr_fd(int n, int fd)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int new_n;
-	
-	new_n = 0;
-	//printf("n:%i\n", n);
-	if(n == -2147483648)
+	t_list	*curr_el;
+
+	while (lst)
 	{
-		write(fd, "-2147483648", ft_strlen("-2147483648"));
-		return;
+		curr_el = lst;
+		lst = (lst)->next;
+		f(curr_el -> content);
 	}
-	if (n < 0)
-	{
-		write (fd, "-", 1);
-		n= -n;
-	}
-	if(n / 10 == 0)
-	{
-		n = n + 48;
-		write(fd, &n, 1);
-		return;
-	}
-	new_n = n/10;
-	ft_putnbr_fd(new_n, fd);
-	n = (n%10) + 48;
-	write(fd, &n, 1);
 }
