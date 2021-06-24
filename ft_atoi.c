@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:57:27 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/23 16:21:43 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/24 09:27:13 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,9 @@ int	ft_atoi(const char *str)
 	int	nb;
 	int	len;
 
-	if(str[0] == '\0')
+	if (str[0] == '\0')
 	{
-		int i = 0;
-		return (i);
+		return (0);
 	}
 	len = ft_strlen(str);
 	minus = check_minus(str, len);

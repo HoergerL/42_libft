@@ -19,6 +19,6 @@ fclean: clean
 re: fclean all
 
 bonus:
-	gcc -Wall -Werror -Wextra $(BONUS) $(FILES) -c
+	gcc -Wall -Werror -Wextra $(BONUS) -c
 	ar rc $(NAME) *.o
 

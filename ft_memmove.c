@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 11:36:37 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/21 10:51:22 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/24 09:48:13 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (0);
 	if (src >= dst)
 	{
-		while (i < len)
-		{
-			dest2[i] = src2[i];
-			i++;
-		}
+		while (i++ < len)
+			dest2[i - 1] = src2[i - 1];
 	}
 	else
 	{

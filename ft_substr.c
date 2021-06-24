@@ -6,16 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 16:32:41 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/21 14:46:22 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/24 09:52:47 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *s2;
-	size_t len_substr;
+	char	*s2;
+	size_t	len_substr;
 
 	if (!s)
 		return (0);
@@ -26,14 +26,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	if (len == 0)
 	{
 		s2[0] = '\0';
-		return s2;
+		return (s2);
 	}
-
 	if (!s2)
 		return (0);
 	if (start > ft_strlen(s))
-		return s2;
+		return (s2);
 	ft_memcpy(s2, &s[start], len_substr);
 	s2[len_substr] = '\0';
-	return s2;
+	return (s2);
 }

@@ -6,13 +6,13 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 16:57:29 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/22 17:00:45 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/24 09:49:04 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);

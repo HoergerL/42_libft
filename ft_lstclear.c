@@ -6,13 +6,13 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 13:21:55 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/23 14:04:41 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/06/24 09:41:50 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*curr_el;
 
