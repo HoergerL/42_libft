@@ -6,12 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 10:43:43 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:40:14 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 15:55:23 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* 
+This function checks the number of digits in x.
+@return: The function returns the number of digits
+*/
 static int	ft_lenHelper(int x)
 {
 	if (x >= 1000000000)
@@ -35,6 +39,11 @@ static int	ft_lenHelper(int x)
 	return (1);
 }
 
+/* 
+This function converts n to a string pointed by str.
+@return: The function returns the converted integer.
+*/
+
 static char	*create_num(int len, int n, char *str)
 {
 	int		is_minus;
@@ -56,7 +65,10 @@ static char	*create_num(int len, int n, char *str)
 	}
 	return (str);
 }
-
+/* 
+This function converts an integer to ascii. 
+@return: The function returns the converted ascii as a string.
+*/
 char	*ft_itoa(int n)
 {
 	char	*str;

@@ -6,12 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 14:10:04 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:42:31 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:00:52 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* 
+This function converts an integer to ascii. 
+@return: The function returns the converted ascii as a string.
+*/
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*curr_el;

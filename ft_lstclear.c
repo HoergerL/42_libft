@@ -6,11 +6,15 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 13:21:55 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:41:50 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 15:57:42 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function uses the del function to delete all the elements of the list lst
+*/
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
