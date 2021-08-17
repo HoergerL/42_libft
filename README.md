@@ -11,4 +11,4 @@ Examples are:
 In the bonus part of the project students learn how to implement linked list and functions to interact with them, e.g.:
 * ft_lstadd_back/ft_lstadd_front  -  how to add elements at the begin/end of a list
 * ft_lstclear                     -  how to clear the list
-* ft_lstiter                      -  how to iterate over the list
+* ft_lstiter                      -  how to execute a function on every list element
