@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* 
+This function concatenates src with dst fot the lenght of dstsize.
+@return: The function returns the lenght of src plus the original length of dst.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	len_dst;

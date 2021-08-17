@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 16:01:00 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:50:51 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:40:27 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function duplicates string s1.
+@return: The function returns the duplicated s1 calles s2.
+*/
 
 char	*ft_strdup(const char *s1)
 {

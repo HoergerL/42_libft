@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 11:23:39 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 15:46:46 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:17:28 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function set len bytes pointed by b to c.
+@return: The function returns b.
+*/
 
 void	*ft_memset(void *b, int c, size_t len)
 {

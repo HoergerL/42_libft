@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 15:46:31 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/21 10:55:20 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:12:56 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function searches through n bytes starting at s for c
+@return: The function returns a pointer to c.
+*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

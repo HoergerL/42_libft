@@ -6,11 +6,15 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 17:04:13 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:50:17 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:33:25 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function prints number n to file descripor fd.
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

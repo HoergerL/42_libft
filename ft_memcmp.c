@@ -6,12 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 15:36:24 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:45:02 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:14:18 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* 
+This function compares s1 with s2 for n bytes.
+@return: The function returns the difference between the first differing chars.
+*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			cnt;

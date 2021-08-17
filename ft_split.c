@@ -6,7 +6,7 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 09:50:35 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/07/12 17:57:54 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:38:55 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 size_t	ft_strlen(const char *s);
+
+/* 
+This function allocates memory for the result.
+@return: The function returns 1 if the allocation worked and 0 if not.
+*/
 
 int	ft_create_result(char ***result, char *s)
 {
@@ -23,6 +28,10 @@ int	ft_create_result(char ***result, char *s)
 	return (1);
 }
 
+/* 
+This function sets different variables.
+*/
+
 void	ft_set_zero(int *i, int *j, int *l)
 {
 	*i = 0;
@@ -30,6 +39,10 @@ void	ft_set_zero(int *i, int *j, int *l)
 	*l = 0;
 }
 
+/* 
+This function jumps to the next char if the end of the string isn't reached.
+@return: The function returns the index where to continue.
+*/
 int	ft_jump_to_end(char *s, int i)
 {
 	if (s[i])
@@ -37,6 +50,10 @@ int	ft_jump_to_end(char *s, int i)
 	return (i);
 }
 
+/* 
+This function jumps to the end of a word.
+@return: The function returns the index of the end of the word.
+*/
 int	ft_jump_to_word_end(char *s, char c, int i)
 {
 	while (s[i] == c && s[i])
@@ -44,6 +61,10 @@ int	ft_jump_to_word_end(char *s, char c, int i)
 	return (i);
 }
 
+/* 
+This function splits string s by character c.
+@return: The function returns an array of strings which were splitted by c.
+*/
 char	**ft_split(char const *s, char c)
 {
 	char	**result;

@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 14:30:15 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:59:34 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:50:23 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function searches for c in the string s.
+@return: The function returns 1 if c was found, else it returns 0.
+*/
 
 static size_t	strfind(const char *s, int c)
 {
@@ -25,6 +30,11 @@ static size_t	strfind(const char *s, int c)
 	}
 	return (0);
 }
+
+/* 
+This function searches for the fist character, which is not included in the set.
+@return: The function returns the index of the first character not included in the set.
+*/
 
 static size_t	findstart(char const *str, char const *set)
 {
@@ -44,6 +54,11 @@ static size_t	findstart(char const *str, char const *set)
 	return (0);
 }
 
+/* 
+This function searches for the last character, which is not included in the set.
+@return: The function returns the index of the last character not included in the set.
+*/
+
 static size_t	findend(char const *str, char const *set)
 {
 	size_t	i;
@@ -62,6 +77,10 @@ static size_t	findend(char const *str, char const *set)
 	return (0);
 }
 
+/* 
+This function trims all the chars in the set from the begin and the end of s1
+@return: The function returns the trimmed string.
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len;

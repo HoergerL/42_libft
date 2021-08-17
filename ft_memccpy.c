@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 13:47:51 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:44:52 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:11:41 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function copies n bytes from src to dst. It stops when it finds c.
+@return: The function returns a pointer to the char after c or NULL if c wasn't found.
+*/
 
 void	*ft_memccpy(void	*dst, const void	*src, int c, size_t n)
 {

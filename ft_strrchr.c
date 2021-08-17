@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 12:22:42 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/20 15:16:27 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:47:29 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function searches fot c in the string s.
+@return: The function returns a pointer to the location of c.
+*/
 
 char	*ft_strrchr(const char *s, int c)
 {

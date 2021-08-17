@@ -6,11 +6,18 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 14:30:11 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:43:54 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:07:36 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function executes the function f on every element in the list
+and saves the element back into the list. If the execution didn't work,
+every element in the list will be deleted with the del function.
+@return: The function returns the modified list.
+*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

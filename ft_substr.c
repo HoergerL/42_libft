@@ -6,11 +6,16 @@
 /*   By: lhoerger <lhoerger@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 16:32:41 by lhoerger          #+#    #+#             */
-/*   Updated: 2021/06/24 09:52:47 by lhoerger         ###   ########.fr       */
+/*   Updated: 2021/08/17 16:51:03 by lhoerger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+This function creates a substring from s starting at start with the lenght of len.
+@return: The function returns the substring.
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
